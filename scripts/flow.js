@@ -45,7 +45,7 @@ const init = async () => {
     };
 };
 
-// $(init);
+$(init);
 
 const getAudioContext = () => {
     if (typeof AudioContext !== "undefined") {
