@@ -1,0 +1,86 @@
+#controller {
+    height: 65px;
+    width: 636px;
+    border-radius: 48.5px;
+    position: absolute;
+    top: 427px;
+    transition: 0.5s;
+    overflow: hidden;
+}
+
+#controller:before {
+    content: '';
+    position: absolute;
+    box-shadow: inset -2px -2px 5px 0 #FFFFFF, inset 1px 1px 3px 1px rgba(222,222,230,0.72);
+    height: 100%;
+    width: 100%;
+    border-radius: 48.5px;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.closed {
+    width: 0 !important;
+}
+
+#recorder {
+    transition: 1s;
+    width: 266px;
+    height: 51px;
+    border-radius: 48.5px;
+    background-color: #F3F3F3;
+    box-shadow: 2px 2px 2px 0 rgba(222,222,230,0.5), -2px -2px 2px 0 #FEFEFE;
+    position: absolute;
+    top: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.recorderLeft {
+    left: 7px;
+}
+
+.recorderRight {
+    left: 363px;
+}
+
+/* VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV Buttons VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV */
+.icon {
+    opacity: 0;
+    position: absolute;
+    transition: 0.2s;
+    animation: appear 0.2s linear;
+}
+
+#leftBtn {
+    left: 7px;
+}
+
+#rightBtn {
+    right: 7px
+}
+
+#record {
+    width: 18px;
+    height: 18px;
+    border-radius: 100%;
+    background-color: #E85156;
+}
+
+#pause {
+    height: 17px;
+}
+
+#confirm {
+    width: 22px;
+}
+
+#play {
+    margin-left: 4px;
+    width: 16px;
+}
+
+#cancel {
+    width: 18px;
+}

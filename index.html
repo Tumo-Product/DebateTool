@@ -6,24 +6,104 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles/loader.css">
+    <link rel="stylesheet" href="styles/animations.css">
+    <link rel="stylesheet" href="styles/fonts.css">
+    <link rel="stylesheet" href="styles/start.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/controller.css">
+    <link rel="stylesheet" href="styles/buttonStates.css">
 </head>
 
 <body>
-    <video id="left" src="https://webrtc.github.io/samples/src/video/chrome.webm" crossOrigin="anonymous" muted
-        controls></video>
-    <video id="right" muted></video>
-    <video id="output" muted loop controls></video>
-    <div>
-        <button id="mix-button">Mix</button>
-        <button id="start-button">Start Record</button>
-        <button id="stop-button">Stop Record</button>
-        <button id="download-button">Download</button>
+    <div class="container">
+        <div class="button deactivated" id="start">
+            <div class="inside"></div>
+            <img src="icons/start.png" alt="" class="icon current">
+        </div>
+    
+        <p id="repIntro" class="introduction"></p>
+    
+        <div id="inputsCard">
+            <p  id="leftInputRep">Representative of </p>
+            <input placeholder="Type your name here" id="leftInput" type="text">
+            
+            <p id="rightInputRep">Representative of </p>
+            <input placeholder="Type your name here" id="rightInput" type="text">
+        </div>
+    
+        <p id="intro" class="introduction"></p>
+    
+        <div id="controller" class="closed">
+            <div id="recorder" class="recorderLeft">
+                <div class="button circle deactivated" id="leftBtn">
+                    <div class="inside"></div>
+                    <div class="icon" id="record"></div>
+                    <img class="icon current" src="icons/pause.png" id="pause">
+                    <img class="icon" src="icons/cancel.png" id="cancel">
+                </div>
+                
+                <div class="button circle" id="centerBtn">
+                    <div class="inside"></div>
+                    <div class="icon current" id="record"></div>
+                    <img class="icon" src="icons/pause.png" id="pause">
+                    <img class="icon" src="icons/play.png" id="play">
+                </div>
+    
+                <div class="button circle invisible" id="rightBtn">
+                    <div class="inside"></div>
+                    <img class="icon current" src="icons/checkmark.png" id="confirm">
+                </div>
+            </div>
+        </div>
+    
+        <div class="name left   over" id="leftName"><p>Invité·e 1</p></div>
+        <div class="frame left  over" id="leftFrame">
+            <img class="profilePic invisible" src="pictures/profilePic.png" alt="">
+    
+            <div class="videoContainer">
+                <video id="leftVideo" src="" muted></video>
+            </div>
+        </div>
+    
+        <div class="name right  over" id="rightName"><p>Invité·e 2</p></div>
+        <div class="frame right over" id="rightFrame">
+            <img class="profilePic" src="pictures/profilePic.png" alt="">
+    
+            <div class="videoContainer">
+                <video id="rightVideo" src="" muted></video>
+            </div>
+        </div>
+    
+        <div id="question" class="under">
+            <p>Pouvez-vous nous donner quelques méthodes ou matériaux de fabrication alternatifs qui pourraient être utilisés pour réduire le plastique utilisé lors de la fabrication des voitures.</p>
+        </div>
     </div>
 
-    <script src="scripts/mixer.js"></script>
+    <audio id="voicover" src=""></audio>
+
+    <div id="loadingScreen">
+        <div id="loader">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+    </div>
+
+    <script src="scripts/loader.js"></script>
+    <script src="scripts/view.js"></script>
+    <script src="scripts/network.js"></script>
+    <script src="scripts/videoManager.js"></script>
     <script src="scripts/recorder.js"></script>
-    <script src="scripts/flow.js"></script>
+    <script src="scripts/controller.js"></script>
+    <script src="scripts/recordingFlow.js"></script>
 </body>
 
 </html>

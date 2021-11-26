@@ -1,0 +1,99 @@
+#inputsCard {
+    position: absolute;
+    top: 146px;
+    left: 95px;
+
+    height: 136px;
+    width: 711px;
+    border-radius: 11px;
+    background-color: #F3F3F3;
+    box-shadow: 3px 3px 4px 0 rgba(222,222,230,0.5), -3px -3px 4px 0 #FEFEFE;
+    transition: 1s;
+}
+
+.goLeft {
+    left: 900px !important;
+}
+
+input {
+    height: 50px;
+    width: 297px;
+    border-radius: 11px;
+    box-shadow: inset -2px -2px 5px 0 #FFFFFF, inset 1px 1px 3px 1px rgba(222,222,230,0.72);
+    background-color: transparent;
+    border: none !important;
+    outline: none !important;
+    position: absolute;
+    top: 57px;
+    padding: 10px 16px 10px 13px;
+
+    color: #F0BC49;
+    font-family: Fedra;
+    font-size: 18px;
+}
+
+input::placeholder {
+    color: #DEDEE6;
+    font-family: FedraBook;
+    font-size: 17px;
+}
+
+#leftInputRep   { left  : 37px; }
+#leftInput      { left  : 30px; }
+#rightInputRep  { left  : 391px; }
+#rightInput     { right : 30px; }
+
+#inputsCard p {
+    color: #67B692;
+    font-size: 17px;
+    width: 288px;
+    height: 20px;
+    position: absolute;
+    top: 22px;
+}
+
+#start {
+    position: absolute;
+    top: 570px;
+    height: 37px;
+    width: 37px;
+    border-radius: 100%;
+
+    background-color: #F3F3F3;
+    box-shadow: 2px -1px 2px 0 #FEFEFE, -1px 2px 2px 0 rgba(0,0,0,0.16);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+}
+
+#start img {
+    margin-left: 3px;
+    margin-top: 1px;
+    height: 16px;
+}
+
+.introduction {
+    position: absolute;
+    color: #5C7CA6;
+    font-family: FedraDemi;
+    font-size: 20px;
+    line-height: 29px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 686px;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+#repIntro {
+    height: 63px;
+    top: 49px;
+}
+
+#intro {
+    height: 214px;
+    top: 319px;
+}

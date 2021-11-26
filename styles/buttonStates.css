@@ -1,0 +1,21 @@
+.deactivated .current {
+    filter: grayscale(1);
+    opacity: 0.3;
+}
+
+.deactivated {
+    pointer-events: none;
+}
+
+.recording .icon {
+    border-radius: 2px !important;
+}
+
+.invisible {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.current {
+    opacity: 1;
+}
