@@ -1,7 +1,3 @@
-const timeout = (ms) => {
-    return new Promise(resolve => setTimeout(resolve, ms));
-}
-
 let outcome = { voiceovers: undefined, leftName: "", rightName: "", leftResponses: [], rightResponses: [] }
 let voiceovers = [];
 let data;
@@ -78,7 +74,7 @@ const handleAnswer = async () => {
         outcome.voiceovers = voiceovers;
         await view.setupEndView();
         startPlayback(outcome);
-        
+        setAnswers(outcome);
         return false;
     }
 
