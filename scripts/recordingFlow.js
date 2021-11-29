@@ -2,7 +2,7 @@ const timeout = (ms) => {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-let outcome = { leftName: "", rightName: "", leftResponses: [], rightResponses: [] }
+let outcome = { voiceovers: undefined, leftName: "", rightName: "", leftResponses: [], rightResponses: [] }
 let voiceovers = [];
 let data;
 
@@ -26,34 +26,17 @@ const onLoad = async () => {
     controller.setup();
 
     view.setQuestionText(data.questions[0].text);
-    await getVoicovers(data.questions);
+    await audioManager.getVoiceovers(data.questions, voiceovers);
 
     loader.toggle();
 }
 
-const getVoicovers = async (questions) => {
-    axios.defaults.baseURL = "https://content-tools.tumo.world:4000";
-
-    for (let i = 0; i < questions.length; i++) {
-        let path = questions[i].audio;
-        let voiceover = await network.getFile(path);
-        voiceover = "data:audio/mpeg;base64," + voiceover;
-        voiceovers.push(voiceover);
-    }
-}
-
-const playVoicover = async (i) => {
-    document.getElementById("voicover").src = voiceovers[i];
-    document.getElementById("voicover").currentTime = 0;
-    document.getElementById("voicover").play();
-}
-
 const onStart = async () => {
-    getInputData(data.sides);
+    getInputData();
     $("#start").unbind("click");
     await view.onStart(outcome.leftName, outcome.rightName);
     await timeout(100);
-    playVoicover(0);
+    audioManager.playVoiceover(voiceovers[0]);
 }
 
 const handleStartBtn = async () => {
@@ -71,9 +54,9 @@ const handleStartBtn = async () => {
     });
 }
 
-const getInputData = async (sides) => {
-    outcome.leftName    = `${sides[0]}: ${$("#leftInput").val().trim()}`;
-    outcome.rightName   = `${sides[1]}: ${$("#rightInput").val().trim()}`;
+const getInputData = async () => {
+    outcome.leftName    = $("#leftInput").val().trim();
+    outcome.rightName   = $("#rightInput").val().trim();
 }
 
 const handleRecording = async () => {
@@ -85,23 +68,28 @@ const handleAnswer = async () => {
     outcome[currentGuest + "Responses"].push(currBaseVideo);
     answerCount++;
 
-    if (currentGuest === "left") {
-        currentGuest = "right";
-        controllerView.moveRecorder(currentGuest);
-    } else {
-        currentGuest = "left";
-        controllerView.moveRecorder(currentGuest);
-    }
+    currentGuest = currentGuest === "left" ? "right" : "left";
 
     if (answerCount === questionsLength) {
-        view.setupEndView();
-        return;
+        videoManager.setVideoSource(outcome.leftResponses[0],   "left");
+        view.switchFrameTo(currentGuest); await timeout(1000);
+        videoManager.setVideoSource(outcome.rightResponses[0],  "right");
+
+        outcome.voiceovers = voiceovers;
+        await view.setupEndView();
+        startPlayback(outcome);
+        
+        return false;
     }
 
+    controllerView.moveRecorder(currentGuest);
+    view.switchFrameTo(currentGuest);
     if (answerCount % 2 === 0) {
         view.setQuestionText(data.questions[answerCount / 2].text);
-        playVoicover(answerCount / 2);
+        audioManager.playVoiceover(voiceovers[answerCount / 2]);
     }
+
+    return true;
 }
 
 $(onLoad);

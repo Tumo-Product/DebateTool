@@ -1,4 +1,6 @@
 const view = {
+    playing: false,
+
     onStart: async (leftName, rightName) => {
         $("#start").addClass("under");
         $(".introduction").css("opacity", 0);
@@ -34,6 +36,16 @@ const view = {
         $(`#${which} #${button}`).addClass("current");
     },
 
+    switchFrameTo: async (where) => {
+        $(".profilePic").each(function() {
+            if ($(this).hasClass("invisible")) {
+                $(this).removeClass("invisible");
+            }
+        });
+        await timeout(150);
+        $(`#${where}Frame .profilePic`).addClass("invisible");
+    },
+
     setupEndView: async () => {
         $("#question").addClass("under");
         $("#controller").addClass("closed");
@@ -42,5 +54,20 @@ const view = {
         $("#rightFrame").addClass("largeRightFrame");
         $("#leftName").addClass("largeLeftName");
         $("#rightName").addClass("largeRightName");
+
+        $("#rightFrame video").css("opacity", 0); await timeout(500);
+        $("#rightFrame video").css("opacity", 1);
+
+        $("#bigPlay").removeClass("under"); await timeout(500);
+    },
+
+    toggleBigPlay: async () => {
+        view.playing = !view.playing;
+
+        if (view.playing) {
+            view.replaceButton("bigPlay", "bigPauseIcon");
+        } else {
+            view.replaceButton("bigPlay", "bigPlayIcon");
+        }
     }
 }

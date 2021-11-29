@@ -1,3 +1,5 @@
+axios.defaults.baseURL = "https://content-tools.tumo.world:4000";
+
 const network = {
     getData: async() => {
         let url = new URL(document.location.href);

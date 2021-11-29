@@ -7,29 +7,3 @@
         opacity: 1;
     }
 }
-
-.largeLeftName {
-    width: 362px !important;
-    height: 59px !important;
-    left: 47px !important;
-}
-
-.largeRightName {
-    width: 362px !important;
-    height: 59px !important;
-    right: 47px !important;
-}
-
-.largeLeftFrame {
-    height: 395px !important;
-    width: 363px !important;
-    top: 117px !important;
-    left: 47px !important;
-}
-
-.largeRightFrame {
-    height: 395px !important;
-    width: 363px !important;
-    top: 117px !important;
-    right: 47px !important;
-}

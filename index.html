@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/controller.css">
     <link rel="stylesheet" href="styles/buttonStates.css">
+    <link rel="stylesheet" href="styles/endView.css">
 </head>
 
 <body>
@@ -27,10 +28,10 @@
         <p id="repIntro" class="introduction"></p>
     
         <div id="inputsCard">
-            <p  id="leftInputRep">Representative of </p>
+            <p  id="leftInputRep"></p>
             <input placeholder="Type your name here" id="leftInput" type="text">
             
-            <p id="rightInputRep">Representative of </p>
+            <p id="rightInputRep"></p>
             <input placeholder="Type your name here" id="rightInput" type="text">
         </div>
     
@@ -50,6 +51,8 @@
                     <div class="icon current" id="record"></div>
                     <img class="icon" src="icons/pause.png" id="pause">
                     <img class="icon" src="icons/play.png" id="play">
+
+                    <div id="progress" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="--value:0"></div>
                 </div>
     
                 <div class="button circle invisible" id="rightBtn">
@@ -59,7 +62,7 @@
             </div>
         </div>
     
-        <div class="name left   over" id="leftName"><p>Invité·e 1</p></div>
+        <div class="name left   over" id="leftName"><p></p></div>
         <div class="frame left  over" id="leftFrame">
             <img class="profilePic invisible" src="pictures/profilePic.png" alt="">
     
@@ -68,7 +71,7 @@
             </div>
         </div>
     
-        <div class="name right  over" id="rightName"><p>Invité·e 2</p></div>
+        <div class="name right  over" id="rightName"><p></p></div>
         <div class="frame right over" id="rightFrame">
             <img class="profilePic" src="pictures/profilePic.png" alt="">
     
@@ -78,11 +81,17 @@
         </div>
     
         <div id="question" class="under">
-            <p>Pouvez-vous nous donner quelques méthodes ou matériaux de fabrication alternatifs qui pourraient être utilisés pour réduire le plastique utilisé lors de la fabrication des voitures.</p>
+            <p></p>
         </div>
-    </div>
 
-    <audio id="voicover" src=""></audio>
+        <div class="button under" id="bigPlay">
+            <div class="inside"></div>
+            <img src="icons/bigPause.png" class="icon" id="bigPauseIcon">
+            <img src="icons/bigPlay.png" class="icon current" id="bigPlayIcon">
+        </div>
+    </div> <!-- END OF CONTAINER -->
+
+    <audio id="voiceover" src=""></audio>
 
     <div id="loadingScreen">
         <div id="loader">
@@ -101,8 +110,10 @@
     <script src="scripts/view.js"></script>
     <script src="scripts/network.js"></script>
     <script src="scripts/videoManager.js"></script>
+    <script src="scripts/audioManager.js"></script>
     <script src="scripts/recorder.js"></script>
     <script src="scripts/controller.js"></script>
+    <script src="scripts/reviewFlow.js"></script>
     <script src="scripts/recordingFlow.js"></script>
 </body>
 

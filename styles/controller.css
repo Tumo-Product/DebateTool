@@ -84,3 +84,24 @@
 #cancel {
     width: 18px;
 }
+
+div[role="progressbar"] {
+    position: absolute;
+    z-index: -1;
+    --size: 2.9rem;
+    --fg: #EBA4A4;
+    --bg: #f3f3f300;
+    --pgPercentage: var(--value);
+    animation: growProgressBar 3s 1 forwards;
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    background: 
+      radial-gradient(closest-side, #F3F3F3 85%, transparent 0 99.9%, #F3F3F3 0),
+      conic-gradient(var(--fg) calc(var(--pgPercentage) * 1%), var(--bg) 0);
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: calc(var(--size) / 5);
+    color: var(--fg);
+}

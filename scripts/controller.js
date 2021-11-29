@@ -3,6 +3,9 @@ const controller = {
     reviewing:  false,
     playing:    false,
     paused:     false,
+    interval:   undefined,
+    pauseInterval: undefined,
+    timePaused: 0,
 
     setup: async () => {
         $("#centerBtn").click(controller.recordClickHandler);
@@ -20,7 +23,7 @@ const controller = {
 
         if (controller.recording) {
             controller.record();
-            document.getElementById("voicover").pause();
+            document.getElementById("voiceover").pause();
         } else {
             controller.stopRecording();
         }
@@ -42,6 +45,7 @@ const controller = {
 
         $("#leftBtn").click(function () {
             controller.cancel();
+            currBaseVideo = null;
             videoManager.attachStream(camStream, currentGuest);
         });
 
@@ -57,7 +61,6 @@ const controller = {
 
         controllerView.cancel();
         controller.playing = false;
-        currBaseVideo = null;
     },
 
     togglePlay: async() => {
@@ -75,25 +78,54 @@ const controller = {
     complete: async () => {
         let oldGuest = currentGuest;
         controller.cancel();
-        handleAnswer();
+        let attach = await handleAnswer();
 
         await timeout(500);
-        videoManager.attachStream(camStream, oldGuest);
+        
+        if (attach) {
+            videoManager.attachStream(camStream, oldGuest);
+        }
     },
 
     record : async () => {
         recorder.start();
         controllerView.record();
+        let startTime = new Date().getTime();
+
+        controller.interval = setInterval(function () {
+            let currTime = new Date().getTime();
+            let time = currTime - startTime - controller.timePaused;
+            let progress = time / 30000 * 100;
+            controllerView.updateProgress(progress);
+            
+            if (time >= 1000) {
+                $("#centerBtn").removeClass("deactivated");
+            }
+            if (time >= 30000) {
+                controller.stopRecording();
+            }
+
+            if (time < 0) time = 0;
+        }, 100);
     },
     pause : async () => {
         recorder.pause();
         controllerView.pause();
+
+        controller.pauseInterval = setInterval(function () {
+            controller.timePaused += 100;
+        }, 100);
     },
     resume: async () => {
         recorder.resume();
         controllerView.resume();
+        clearInterval(controller.pauseInterval);
     },
     stopRecording: async () => {
+        controllerView.updateProgress(0);
+        clearInterval(controller.interval);
+        clearInterval(controller.pauseInterval);
+
         recorder.stop().then(() => {
             controllerView.stopRecording();
             handleRecording();
@@ -104,7 +136,7 @@ const controller = {
 
 const controllerView = {
     record: async () => {
-        $("#centerBtn").addClass("recording");
+        $("#centerBtn").addClass("recording deactivated");
         $("#leftBtn").removeClass("deactivated");
     },
     stopRecording: async () => {
@@ -128,13 +160,8 @@ const controllerView = {
     moveRecorder: async (where) => {
         $("#recorder").removeClass("recorderLeft recorderRight");
         $("#recorder").addClass(where === "left" ? "recorderLeft" : "recorderRight");
-
-        $(".profilePic").each(function() {
-            if ($(this).hasClass("invisible")) {
-                $(this).removeClass("invisible");
-            }
-        });
-        await timeout(150);
-        $(`#${where}Frame .profilePic`).addClass("invisible");
+    },
+    updateProgress    : async (progress) => {
+        $("#progress").css("--value", progress);
     }
 }

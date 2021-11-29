@@ -167,3 +167,7 @@ video {
     z-index: 1;
     transition: 0.2s;
 }
+
+#centerBtn {
+    z-index: 1;
+}
