@@ -98,7 +98,7 @@ const controller = {
             let progress = time / 30000 * 100;
             controllerView.updateProgress(progress);
             
-            if (time >= 1000) {
+            if (time >= 5000) {
                 $("#centerBtn").removeClass("deactivated");
             }
             if (time >= 30000) {
