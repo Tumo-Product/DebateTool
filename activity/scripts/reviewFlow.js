@@ -8,8 +8,10 @@ const startPlayback = async (outcome) => {
     setupEvents();
     view.toggleBigPlay();
     $(`video`).prop("muted", false);
-    videoManager.setVideoSource(reviewData.leftResponses[0],   "left");
-    videoManager.setVideoSource(reviewData.rightResponses[0],  "right");
+    if (window.location.href.includes("examiner")) {
+        videoManager.setVideoSource(reviewData.leftResponses[0],   "left");
+        videoManager.setVideoSource(reviewData.rightResponses[0],  "right");
+    }
 
     $("#leftName p").text(reviewData.leftName);
     $("#rightName p").text(reviewData.rightName);
