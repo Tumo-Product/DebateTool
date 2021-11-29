@@ -123,6 +123,7 @@ const controller = {
     },
     stopRecording: async () => {
         controllerView.updateProgress(0);
+        controller.timePaused = 0;
         clearInterval(controller.interval);
         clearInterval(controller.pauseInterval);
 

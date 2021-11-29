@@ -4,7 +4,7 @@
     border-radius: 48.5px;
     position: absolute;
     top: 427px;
-    transition: 0.5s;
+    transition: 1s;
     overflow: hidden;
 }
 
@@ -21,6 +21,7 @@
 
 .closed {
     width: 0 !important;
+    opacity: 0 !important;
 }
 
 #recorder {

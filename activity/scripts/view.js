@@ -49,14 +49,17 @@ const view = {
     setupEndView: async () => {
         $("#question").addClass("under");
         $("#controller").addClass("closed");
-        await timeout(500);
+        await timeout(1100);
         $("#leftFrame").addClass("largeLeftFrame");
         $("#rightFrame").addClass("largeRightFrame");
         $("#leftName").addClass("largeLeftName");
         $("#rightName").addClass("largeRightName");
 
-        $("#rightFrame video").css("opacity", 0); await timeout(500);
-        $("#rightFrame video").css("opacity", 1);
+        $("#rightFrame video").css("opacity", 0); 
+        setTimeout(() => {
+            $("#rightFrame video").css("opacity", 1);
+        }, 500);
+        await timeout(200);
 
         $("#bigPlay").removeClass("under"); await timeout(500);
     },

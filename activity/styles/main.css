@@ -125,7 +125,7 @@ video {
 }
 
 #question {
-    transition: 0.5s;
+    transition: 1s;
     position: absolute;
     top: 510px;
     height: 118px;
