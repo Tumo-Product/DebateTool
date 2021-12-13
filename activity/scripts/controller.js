@@ -93,15 +93,17 @@ const controller = {
         let startTime = new Date().getTime();
 
         controller.interval = setInterval(function () {
+            let duration = answerCount > 1 ? 30000 : 60000;
             let currTime = new Date().getTime();
             let time = currTime - startTime - controller.timePaused;
-            let progress = time / 30000 * 100;
+            let progress = time / duration * 100;
             controllerView.updateProgress(progress);
             
             if (time >= 5000) {
                 $("#centerBtn").removeClass("deactivated");
             }
-            if (time >= 30000) {
+            if (time >= duration) {
+                controller.recording = false;
                 controller.stopRecording();
             }
 
