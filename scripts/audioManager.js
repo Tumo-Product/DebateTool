@@ -2,9 +2,10 @@ const audioManager = {
     getVoiceovers: async (questions, voiceovers) => {
         for (let i = 0; i < questions.length; i++) {
             let path = questions[i].audio;
-            let voiceover = await network.getFile(path);
-            voiceover = "data:audio/mpeg;base64," + voiceover;
-            voiceovers.push(voiceover);
+            // let voiceover = await network.getFile(path);
+            // voiceover = "data:audio/mpeg;base64," + voiceover;
+            // voiceovers.push(voiceover);
+            voiceovers.push(path);
         }
     },
     
