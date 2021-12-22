@@ -2,10 +2,10 @@ axios.defaults.baseURL = "https://content-tools.tumo.world:4000";
 
 const network = {
     getData: async() => {
-        let url = new URL(document.location.href);
-        let lan = url.searchParams.get("lan");
-        let id  = url.searchParams.get("id");
-        let getString = `data/${lan}/${id}.json`;
+        let href = document.location.href;
+        let splitPath = href.split("/");
+        let string = splitPath[splitPath.length - 2];
+        let getString = `../data/${string}.json`;
         let data;
 
         await $.get(getString, function (json) {

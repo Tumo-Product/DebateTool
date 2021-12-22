@@ -8,21 +8,21 @@
     <title>Document</title>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="styles/loader.css">
-    <link rel="stylesheet" href="styles/animations.css">
-    <link rel="stylesheet" href="styles/fonts.css">
-    <link rel="stylesheet" href="styles/start.css">
-    <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="styles/controller.css">
-    <link rel="stylesheet" href="styles/buttonStates.css">
-    <link rel="stylesheet" href="styles/endView.css">
+    <link rel="stylesheet" href="../styles/loader.css">
+    <link rel="stylesheet" href="../styles/animations.css">
+    <link rel="stylesheet" href="../styles/fonts.css">
+    <link rel="stylesheet" href="../styles/start.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/controller.css">
+    <link rel="stylesheet" href="../styles/buttonStates.css">
+    <link rel="stylesheet" href="../styles/endView.css">
 </head>
 
 <body>
     <div class="container">
         <div class="button deactivated" id="start">
             <div class="inside"></div>
-            <img src="icons/start.png" alt="" class="icon current">
+            <img src="../icons/start.png" alt="" class="icon current">
         </div>
     
         <p id="repIntro" class="introduction"></p>
@@ -42,29 +42,29 @@
                 <div class="button circle deactivated" id="leftBtn">
                     <div class="inside"></div>
                     <div class="icon" id="record"></div>
-                    <img class="icon current" src="icons/pause.png" id="pause">
-                    <img class="icon" src="icons/cancel.png" id="cancel">
+                    <img class="icon current" src="../icons/pause.png" id="pause">
+                    <img class="icon" src="../icons/cancel.png" id="cancel">
                 </div>
                 
                 <div class="button circle" id="centerBtn">
                     <div class="inside"></div>
                     <div class="icon current" id="record"></div>
-                    <img class="icon" src="icons/pause.png" id="pause">
-                    <img class="icon" src="icons/play.png" id="play">
+                    <img class="icon" src="../icons/pause.png" id="pause">
+                    <img class="icon" src="../icons/play.png" id="play">
 
                     <div id="progress" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="--value:0"></div>
                 </div>
     
                 <div class="button circle invisible" id="rightBtn">
                     <div class="inside"></div>
-                    <img class="icon current" src="icons/checkmark.png" id="confirm">
+                    <img class="icon current" src="../icons/checkmark.png" id="confirm">
                 </div>
             </div>
         </div>
     
         <div class="name left   over" id="leftName"><p></p></div>
         <div class="frame left  over" id="leftFrame">
-            <img class="profilePic invisible" src="pictures/profilePic.png" alt="">
+            <img class="profilePic invisible" src="../pictures/profilePic.png" alt="">
     
             <div class="videoContainer">
                 <video id="leftVideo" src="" muted></video>
@@ -73,7 +73,7 @@
     
         <div class="name right  over" id="rightName"><p></p></div>
         <div class="frame right over" id="rightFrame">
-            <img class="profilePic" src="pictures/profilePic.png" alt="">
+            <img class="profilePic" src="../pictures/profilePic.png" alt="">
     
             <div class="videoContainer">
                 <video id="rightVideo" src="" muted></video>
@@ -86,8 +86,8 @@
 
         <div class="button under" id="bigPlay">
             <div class="inside"></div>
-            <img src="icons/bigPause.png" class="icon" id="bigPauseIcon">
-            <img src="icons/bigPlay.png" class="icon current" id="bigPlayIcon">
+            <img src="../icons/bigPause.png" class="icon" id="bigPauseIcon">
+            <img src="../icons/bigPlay.png" class="icon current" id="bigPlayIcon">
         </div>
     </div> <!-- END OF CONTAINER -->
 
@@ -106,17 +106,17 @@
         </div>
     </div>
 
-    <script src="scripts/loader.js"></script>
-    <script src="scripts/tools.js"></script>
-    <script src="scripts/view.js"></script>
-    <script src="scripts/network.js"></script>
-    <script src="scripts/videoManager.js"></script>
-    <script src="scripts/audioManager.js"></script>
-    <script src="scripts/recorder.js"></script>
-    <script src="scripts/controller.js"></script>
-    <script src="scripts/reviewFlow.js"></script>
-    <script src="scripts/recordingFlow.js"></script>
-    <script src="scripts/activityManagerCallback.js"></script>
+    <script src="../scripts/loader.js"></script>
+    <script src="../scripts/tools.js"></script>
+    <script src="../scripts/view.js"></script>
+    <script src="../scripts/network.js"></script>
+    <script src="../scripts/videoManager.js"></script>
+    <script src="../scripts/audioManager.js"></script>
+    <script src="../scripts/recorder.js"></script>
+    <script src="../scripts/controller.js"></script>
+    <script src="../scripts/reviewFlow.js"></script>
+    <script src="../scripts/recordingFlow.js"></script>
+    <script src="../scripts/activityManagerCallback.js"></script>
 </body>
 
 </html>
