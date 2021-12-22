@@ -15,9 +15,9 @@ const view = {
         $("#leftName p").text(leftName);
         $("#rightName p").text(rightName);
     },
-    initText: async (repText, sides, repIntro, intro) => {
-        $("#leftInputRep").text (repText + sides[0]);
-        $("#rightInputRep").text(repText + sides[1]);
+    initText: async (sides, repIntro, intro) => {
+        $("#leftInputRep").html (sides[0]);
+        $("#rightInputRep").html(sides[1]);
 
         $("#repIntro").html(repIntro);
         $("#intro").html(intro);

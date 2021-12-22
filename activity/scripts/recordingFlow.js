@@ -12,7 +12,7 @@ let recorder;
 const onLoad = async () => {
     data = await network.getData();
     questionsLength = data.questions.length * 2;
-    view.initText(data.repText, data.sides, data.repIntro, data.intro);
+    view.initText(data.sides, data.repIntro, data.intro);
     handleStartBtn();
     
     camStream   = await videoManager.getCameraStream();
