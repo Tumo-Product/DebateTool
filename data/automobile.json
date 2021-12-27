@@ -5,40 +5,40 @@
 
     "questions" : [
         {
-            "text"  : "Quelle est l’importance du plastique dans la fabrication de voitures de nos jours ?",
-            "audio" : "https://content-tools.tumo.world/VideoStorage/posterData/Build%20a%20Shell/Wrong%201.wav"
+            "text"  : "Présente-toi !",
+            "audio" : "https://content-tools.tumo.world/VideoStorage/recordings/Debate/automobile/1%20Bienvenue%20au%20dixi%C3%A8me.wav"
         },
         {
-            "text"  : "Quelles sont les méthodes de fabrication alternatives ou des matériaux qui pourraient être utilisés pour réduire le plastique utilisé lors de la fabrication des voitures.",
-            "audio" : "https://content-tools.tumo.world/VideoStorage/posterData/Build%20a%20Shell/Wrong%201.wav"
+            "text"  : "Ma première question porte sur l'importance du plastique dans l'industrie automobile. Quelle est l'importance du plastique dans la fabrication de voitures de nos jours ? Et quelles sont les méthodes de fabrication alternatives ou des matériaux qui pourraient être utilisés pour réduire le plastique utilisé lors de la fabrication des voitures.",
+            "audio" : "https://content-tools.tumo.world/VideoStorage/recordings/Debate/automobile/2%20Tr%C3%A8s%20int%C3%A9ressant.wav"
         },
         {
-            "text"  : "Que fournissent les industries de la plastique et de l’automobile ?",
-            "audio" : "https://content-tools.tumo.world/VideoStorage/posterData/Build%20a%20Shell/Wrong%201.wav"
+            "text"  : "Que fournissent les industries de la plasturgie et de l'automobile ?",
+            "audio" : "https://content-tools.tumo.world/VideoStorage/recordings/Debate/automobile/3%20Que%20fournissent%20les.wav"
         },
         {
             "text"  : "Comment l’industrie du plastique et de l’automobile peut-elle impacter l’environnement ?",
-            "audio" : "https://content-tools.tumo.world/VideoStorage/posterData/Build%20a%20Shell/Wrong%201.wav"
+            "audio" : "https://content-tools.tumo.world/VideoStorage/recordings/Debate/automobile/4%20Comment%20l%E2%80%99industrie.wav"
         },
         {
-            "text"  : "Quelle est selon vous la meilleure solution pour réduire la quantité de plastique utilisée par l’industrie automobile et pourquoi ?",
-            "audio" : "https://content-tools.tumo.world/VideoStorage/posterData/Build%20a%20Shell/Wrong%201.wav"
+            "text"  : "Quelle est selon vous la meilleure solution pour réduire la quantité de plastique utilisée par l'industrie automobile et pourquoi ?",
+            "audio" : "https://content-tools.tumo.world/VideoStorage/recordings/Debate/automobile/5%20Ma%20prochaine%20question..wav"
         },
         {
             "text"  : "Pensez-vous que le lien entre ces deux industries a influencé le développement de chacune d’entre elles ?",
-            "audio" : "https://content-tools.tumo.world/VideoStorage/posterData/Build%20a%20Shell/Wrong%201.wav"
+            "audio" : "https://content-tools.tumo.world/VideoStorage/recordings/Debate/automobile/6%20Merci.%20Pensez-vous.wav"
         },
         {
-            "text"  : "Il est possible de trouver de nouvelles méthodes de fabrication pour réduire la quantité de plastique que nous utilisons dans la fabrication automobile ?",
-            "audio" : "https://content-tools.tumo.world/VideoStorage/posterData/Build%20a%20Shell/Wrong%201.wav"
+            "text"  : "Pensez-vous qu'il est possible de trouver de nouvelles méthodes de fabrication pour réduire la quantité de plastique que nous utilisons dans la fabrication automobile ? Ou même utiliser des matériaux alternatifs ?",
+            "audio" : "https://content-tools.tumo.world/VideoStorage/recordings/Debate/automobile/7%20Pensez-vous%20qu_il.wav"
         },
         {
-            "text"  : "Qu’apportent les industries de la plasturgie et de l’automobile ? Y a-t-il d’autres industries ou méthodes que nous pouvons mettre en œuvre et qui seraient moins productrices de déchets à long terme ?",
-            "audio" : "https://content-tools.tumo.world/VideoStorage/posterData/Build%20a%20Shell/Wrong%201.wav"
+            "text"  : "Qu'apportent les industries de la plasturgie et de l'automobile ? Y a-t-il d'autres industries ou méthodes que nous pouvons mettre en œuvre et qui seraient moins productrices de déchets à long terme ?",
+            "audio" : "https://content-tools.tumo.world/VideoStorage/recordings/Debate/automobile/8%20Qu_apportent%20les%20industries.wav"
         },
         {
-            "text"  : "Serait-il possible de trouver un équilibre entre l’utilisation d’autant de plastiques dans les voitures et la préservation de l’environnement ?",
-            "audio" : "https://content-tools.tumo.world/VideoStorage/posterData/Build%20a%20Shell/Wrong%201.wav"
+            "text"  : "Serait-il possible de trouver un équilibre entre l'utilisation d'autant de plastiques dans les voitures et la préservation de l'environnement ?",
+            "audio" : "https://content-tools.tumo.world/VideoStorage/recordings/Debate/automobile/9%20J_ai%20une%20derni%C3%A8re%20question.wav"
         }
     ]
 }
