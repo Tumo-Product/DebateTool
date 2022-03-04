@@ -6,15 +6,15 @@
     "questions" : [
         {
             "text"  : "Présente-toi !",
-            "audio" : "https://content-tools.tumo.world/VideoStorage/recordings/Debate/urban_rural/1%20Bienvenue%20au%20dixi%C3%A8me.wav"
+            "audio" : "https://content-tools.tumo.world/VideoStorage/recordings/Debate/urban_rural/1%20Bienvenue%20au%20dixie%CC%80me.wav"
         },
         {
             "text"  : "Pourquoi votre communauté devrait-elle être prioritaire en matière de gestion et d'utilisation de l'eau ?",
-            "audio" : "https://content-tools.tumo.world/VideoStorage/recordings/Debate/urban_rural/2%20Tr%C3%A8s%20int%C3%A9ressant%2C%20merci.wav"
+            "audio" : "https://content-tools.tumo.world/VideoStorage/recordings/Debate/urban_rural/2%20Tre%CC%80s%20inte%CC%81ressant%2C%20merci.wav"
         },
         {
             "text"  : "Que peuvent faire les communautés urbaines pour soutenir les communautés rurales en cas de mauvaise récolte ? Que peuvent faire les communautés rurales pour soutenir les communautés urbaines en période de sécheresse affectant la ville  ?",
-            "audio" : "https://content-tools.tumo.world/VideoStorage/recordings/Debate/urban_rural/3%20Que%20peuvent%20faire%20les%20communaut%C3%A9s.wav"
+            "audio" : "https://content-tools.tumo.world/VideoStorage/recordings/Debate/urban_rural/3%20Que%20peuvent%20faire%20les%20communaute%CC%81s.wav"
         },
         {
             "text"  : "Quelle est la meilleure façon pour chacune de vos communautés de limiter les effets d’une année de sécheresse ?",
@@ -26,7 +26,7 @@
         },
         {
             "text"  : "Quels sont les avantages de vivre dans chacune de vos communautés ?",
-            "audio" : "https://content-tools.tumo.world/VideoStorage/recordings/Debate/urban_rural/6%20Vous%20%C3%AAtes%20clairement.wav"
+            "audio" : "https://content-tools.tumo.world/VideoStorage/recordings/Debate/urban_rural/6%20Vous%20e%CC%82tes%20clairement.wav"
         },
         {
             "text"  : "Quelles sont, selon vous, les meilleures actions pour lutter contre le changement climatique ?",
@@ -34,7 +34,7 @@
         },
         {
             "text"  : "Quel(s) impact(s) votre communauté peut-elle avoir sur le changement climatique, et que l’autre communauté n’a pas ? ",
-            "audio" : "https://content-tools.tumo.world/VideoStorage/recordings/Debate/urban_rural/8%20Chacune%20de%20vos%20communaut%C3%A9s.wav"
+            "audio" : "https://content-tools.tumo.world/VideoStorage/recordings/Debate/urban_rural/8%20Chacune%20de%20vos%20communaute%CC%81s.wav"
         },
         {
             "text"  : "Les zones rurales contribuent-elles au changement climatique d’une manière différente des  zones urbaines ? Peut-on remédier à cela ? Les zones urbaines contribuent-elles au changement climatique d’une manière différente des qui ne concerne pas les zones rurales ? Peut-on remédier à cela ?",
@@ -42,7 +42,7 @@
         },
         {
             "text"  : "Pourquoi votre communauté est-elle la meilleure où vivre si vous êtes une personne soucieuse de l’environnement et préoccupée par le changement climatique ?",
-            "audio" : "https://content-tools.tumo.world/VideoStorage/recordings/Debate/urban_rural/10%20J_ai%20une%20derni%C3%A8re%20question.wav"
+            "audio" : "https://content-tools.tumo.world/VideoStorage/recordings/Debate/urban_rural/10%20J_ai%20une%20dernie%CC%80re%20question.wav"
         }
     ]
 }

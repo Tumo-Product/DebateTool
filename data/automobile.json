@@ -6,11 +6,11 @@
     "questions" : [
         {
             "text"  : "Présente-toi !",
-            "audio" : "https://content-tools.tumo.world/VideoStorage/recordings/Debate/automobile/1%20Bienvenue%20au%20dixi%C3%A8me.wav"
+            "audio" : "https://content-tools.tumo.world/VideoStorage/recordings/Debate/automobile/1%20Bienvenue%20au%20dixie%CC%80me.wav"
         },
         {
             "text"  : "Ma première question porte sur l'importance du plastique dans l'industrie automobile. Quelle est l'importance du plastique dans la fabrication de voitures de nos jours ? Et quelles sont les méthodes de fabrication alternatives ou des matériaux qui pourraient être utilisés pour réduire le plastique utilisé lors de la fabrication des voitures.",
-            "audio" : "https://content-tools.tumo.world/VideoStorage/recordings/Debate/automobile/2%20Tr%C3%A8s%20int%C3%A9ressant.wav"
+            "audio" : "https://content-tools.tumo.world/VideoStorage/recordings/Debate/automobile/2%20Tre%CC%80s%20inte%CC%81ressant.wav"
         },
         {
             "text"  : "Que fournissent les industries de la plasturgie et de l'automobile ?",
@@ -38,7 +38,7 @@
         },
         {
             "text"  : "Serait-il possible de trouver un équilibre entre l'utilisation d'autant de plastiques dans les voitures et la préservation de l'environnement ?",
-            "audio" : "https://content-tools.tumo.world/VideoStorage/recordings/Debate/automobile/9%20J_ai%20une%20derni%C3%A8re%20question.wav"
+            "audio" : "https://content-tools.tumo.world/VideoStorage/recordings/Debate/automobile/9%20J_ai%20une%20dernie%CC%80re%20question.wav"
         }
     ]
 }
