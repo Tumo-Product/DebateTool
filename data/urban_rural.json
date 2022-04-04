@@ -1,5 +1,5 @@
 {
-    "sides"     : ["Représentant·e de<br> la communauté Urban", "Représentant·e de<br> la communauté Rural"],
+    "sides"     : ["Représentant·e de<br> la communauté Urbaine", "Représentant·e de<br> la communauté Rurale"],
     "repIntro"  : "Choisis lequel de ces deux groupes tu souhaites représenter <br>et écris ton prénom dans la fenêtre appropriée ci-dessous.",
     "intro"     : "Appuie sur le bouton rouge pour commencer l’enregistrement.<br> Tu peux mettre en pause ou recommencer. Tu peux même supprimer ton enregistrement et en faire une autre avant de choisir ta version finale.<br<br> Pour nous l’envoyer, clique sur le bouton vert. <br>Fais attention, une fois que tu nous envoies ton enregistrement, tu ne seras plus capable de le modifier.",
 
@@ -37,7 +37,7 @@
             "audio" : "https://content-tools.tumo.world/VideoStorage/recordings/Debate/urban_rural/8%20Chacune%20de%20vos%20communaute%CC%81s.wav"
         },
         {
-            "text"  : "Les zones rurales contribuent-elles au changement climatique d’une manière différente des  zones urbaines ? Peut-on remédier à cela ? Les zones urbaines contribuent-elles au changement climatique d’une manière différente des qui ne concerne pas les zones rurales ? Peut-on remédier à cela ?",
+            "text"  : "Les zones rurales contribuent-elles au changement climatique d’une manière différente des zones urbaines ? Peut-on remédier à cela ? Les zones urbaines contribuent-elles au changement climatique d’une manière différente qui ne concerne pas les zones rurales ? Peut-on remédier à cela ?",
             "audio" : "https://content-tools.tumo.world/VideoStorage/recordings/Debate/urban_rural/9%20Les%20zones%20rurales.wav"
         },
         {
