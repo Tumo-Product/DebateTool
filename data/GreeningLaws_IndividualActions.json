@@ -1,0 +1,44 @@
+{
+    "sides"     : ["Représentant·e de<br> soutien les lois sur le climat", "Représentant·e de<br> soutien les actions individuelles"],
+    "repIntro"  : "Choisis lequel de ces deux groupes tu souhaites représenter <br>et écris ton prénom dans la fenêtre appropriée ci-dessous.",
+    "intro"     : "Appuie sur le bouton rouge pour commencer l’enregistrement.<br> Tu peux mettre en pause ou recommencer. Tu peux même supprimer ton enregistrement et en faire une autre avant de choisir ta version finale.<br> Pour nous l’envoyer, clique sur le bouton vert. <br>Fais attention, une fois que tu nous envoies ton enregistrement, tu ne seras plus capable de le modifier.",
+
+    "questions" : [
+        {
+            "text"  : "Présente-toi !",
+            "audio" : "https://content-tools.tumo.world/FileSystem/data/Debate/GreeningLaws_IndividualActions/Debate%20-%20Welcome%20Speach.wav"
+        },
+        {
+            "text"  : "Pouvez-vous tous les deux me donner certaines des raisons pour lesquelles vous pensez que rendre l’environnement bâti plus vert et écologique est important si nous voulons limiter notre impact sur l'environnement ?",
+            "audio" : "https://content-tools.tumo.world/FileSystem/data/Debate/GreeningLaws_IndividualActions/Debate%20-%20Introduction.wav"
+        },
+        {
+            "text"  : "Pourquoi les lois sont-elles nécessaires pour transformer l'environnement bâti ? Les actions individuelles peuvent-elles également modifier cet environnement ?",
+            "audio" : "https://content-tools.tumo.world/FileSystem/data/Debate/GreeningLaws_IndividualActions/Debate%20-%201%20.wav"
+        },
+        {
+            "text"  : "Pouvez-vous nous donner un exemple de loi de verdissement réussi, à Paris ou ailleurs ? Pouvez-vous citer un exemple d'initiative d'écologisation réussie réalisée sans l’aide de lois ?",
+            "audio" : "https://content-tools.tumo.world/FileSystem/data/Debate/GreeningLaws_IndividualActions/Debate%20-%202.wav"
+        },
+        {
+            "text"  : "Selon vous, la rigueur et la complexité inhérente à la mise en place d’une loi dite “Climat” sont-elles un atout ou un frein pour lutter efficacement contre le changement climatique dans les environnements bâtis ?",
+            "audio" : "https://content-tools.tumo.world/FileSystem/data/Debate/GreeningLaws_IndividualActions/Debate%20-%203.wav"
+        },
+        {
+            "text"  : "Dans quels domaines pensez-vous que les lois et les politiques climatiques seraient les plus efficaces, et où pensez-vous que les actions individuelles sont plus adaptées ?",
+            "audio" : "https://content-tools.tumo.world/FileSystem/data/Debate/GreeningLaws_IndividualActions/Debate%20-%204.wav"
+        },
+        {
+            "text"  : "Quelles sont certaines des raisons pour lesquelles vous pensez que les lois sur le climat ont été si efficaces ou inefficaces jusqu'à présent ?",
+            "audio" : "https://content-tools.tumo.world/FileSystem/data/Debate/GreeningLaws_IndividualActions/Debate%20-%205.wav"
+        },
+        {
+            "text"  : "Si vous en aviez le pouvoir, quelle action individuelle prôneriez-vous, ou quelle loi voteriez-vous pour transformer l’environnement bâti actuel ?",
+            "audio" : "https://content-tools.tumo.world/FileSystem/data/Debate/GreeningLaws_IndividualActions/Debate%20-%206.wav"
+        }
+    ],
+
+    "endSpeech" : {
+        "audio"     : "https://content-tools.tumo.world/FileSystem/data/Debate/GreeningLaws_IndividualActions/Debate%20-%20End%20Speech.wav"
+    }
+}

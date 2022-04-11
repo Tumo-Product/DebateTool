@@ -21,18 +21,21 @@ const startPlayback = async (outcome) => {
 }
 
 const setupEvents = async () => {
-    document.getElementById("voiceover").addEventListener("ended", function() {
+    let voiceover   = document.getElementById("voiceover");
+    let leftVideo   = document.getElementById("leftVideo");
+    let rightVideo  = document.getElementById("rightVideo");
+    
+    voiceover.addEventListener("ended", function() {
         videoManager.play(reviewGuest);
     });
 
-    document.getElementById("leftVideo").addEventListener("ended", function() {
-        
+    leftVideo.addEventListener("ended", function() {
         reviewGuest = "right";
         view.switchFrameTo(reviewGuest);
         videoManager.play(reviewGuest);
     });
 
-    document.getElementById("rightVideo").addEventListener("ended", async function() {
+    rightVideo.addEventListener("ended", async function() {
         reviewGuest = "left";
         currQuestion++;
         if (reviewData.leftResponses[currQuestion] === undefined) {
@@ -53,10 +56,6 @@ const setupEvents = async () => {
         await timeout(500);
         videoManager.setVideoSource(reviewData.rightResponses[currQuestion], "right");
     });
-
-    let voiceover = document.getElementById("voiceover");
-    let leftVideo = document.getElementById("leftVideo");
-    let rightVideo = document.getElementById("rightVideo");
 
     $("#bigPlay").click(function() {
         if (elemPaused === undefined) {

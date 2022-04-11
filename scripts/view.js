@@ -61,7 +61,9 @@ const view = {
             $("#rightFrame video").css("opacity", 1);
         }, 500);
         await timeout(200);
+    },
 
+    showBigPlay: async () => {
         $("#bigPlay").removeClass("under"); await timeout(500);
     },
 

@@ -9,6 +9,8 @@ let answerCount = 0;
 let camStream;
 let recorder;
 
+let endSpeechAudio = new Audio();
+
 const onLoad = async () => {
     data = await network.getData();
     questionsLength = data.questions.length * 2;
@@ -61,20 +63,12 @@ const handleRecording = async () => {
 }
 
 const handleAnswer = async () => {
-    outcome[currentGuest + "Responses"].push(currBaseVideo);
     answerCount++;
-
+    outcome[currentGuest + "Responses"].push(currBaseVideo);
     currentGuest = currentGuest === "left" ? "right" : "left";
 
     if (answerCount === questionsLength) {
-        videoManager.setVideoSource(outcome.leftResponses[0],   "left");
-        view.switchFrameTo(currentGuest); await timeout(1000);
-        videoManager.setVideoSource(outcome.rightResponses[0],  "right");
-
-        outcome.voiceovers = voiceovers;
-        await view.setupEndView();
-        startPlayback(outcome);
-        setAnswers(outcome);
+        await setupEnd();
         return false;
     }
 
@@ -86,6 +80,33 @@ const handleAnswer = async () => {
     }
 
     return true;
+}
+
+const setupEnd = async () => {
+    videoManager.setVideoSource(outcome.leftResponses[0],   "left");
+    view.switchFrameTo(currentGuest); await timeout(1000);
+    videoManager.setVideoSource(outcome.rightResponses[0],  "right");
+
+    outcome.voiceovers = voiceovers;
+    setAnswers(outcome);
+
+    await view.setupEndView();
+
+    if (data.endSpeech === undefined) {
+        await view.showBigPlay();
+    } else {
+        endSpeechAudio.src = data.endSpeech.audio;
+        endSpeechAudio.play();
+
+        endSpeechAudio.addEventListener("ended", async () => {
+            await view.showBigPlay();
+            startPlayback(outcome);
+        });
+
+        return;
+    }
+    
+    startPlayback(outcome);
 }
 
 $(onLoad);

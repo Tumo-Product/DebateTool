@@ -1,7 +1,7 @@
 {
     "sides"     : ["Supporteur·trice du plastique dans l’industrie automobile", "Adversaire du plastique dans l’industrie automobile"],
     "repIntro"  : "Choisis lequel de ces deux groupes tu souhaites représenter <br>et écris ton prénom dans la fenêtre appropriée ci-dessous.",
-    "intro"     : "Appuie sur le bouton rouge pour commencer l’enregistrement.<br> Tu peux mettre en pause ou recommencer. Tu peux même supprimer ton enregistrement et en faire une autre avant de choisir ta version finale.<br<br> Pour nous l’envoyer, clique sur le bouton vert. <br>Fais attention, une fois que tu nous envoies ton enregistrement, tu ne seras plus capable de le modifier.",
+    "intro"     : "Appuie sur le bouton rouge pour commencer l’enregistrement.<br> Tu peux mettre en pause ou recommencer. Tu peux même supprimer ton enregistrement et en faire une autre avant de choisir ta version finale.<br> Pour nous l’envoyer, clique sur le bouton vert. <br>Fais attention, une fois que tu nous envoies ton enregistrement, tu ne seras plus capable de le modifier.",
 
     "questions" : [
         {

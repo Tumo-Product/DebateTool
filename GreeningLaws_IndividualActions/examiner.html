@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../styles/loader.css">
+    <link rel="stylesheet" href="../styles/animations.css">
+    <link rel="stylesheet" href="../styles/fonts.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/controller.css">
+    <link rel="stylesheet" href="../styles/buttonStates.css">
+    <link rel="stylesheet" href="../styles/endView.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="name left largeLeftName" id="leftName"><p></p></div>
+        <div class="frame left largeLeftFrame" id="leftFrame">
+            <img class="profilePic invisible" src="../pictures/profilePic.png" alt="">
+    
+            <div class="videoContainer">
+                <video id="leftVideo" src="" muted></video>
+            </div>
+        </div>
+    
+        <div class="name right largeRightName" id="rightName"><p></p></div>
+        <div class="frame right largeRightFrame" id="rightFrame">
+            <img class="profilePic" src="../pictures/profilePic.png" alt="">
+    
+            <div class="videoContainer">
+                <video id="rightVideo" src="" muted></video>
+            </div>
+        </div>
+
+        <div class="button" id="bigPlay">
+            <div class="inside"></div>
+            <img src="../icons/bigPause.png" class="icon" id="bigPauseIcon">
+            <img src="../icons/bigPlay.png" class="icon current" id="bigPlayIcon">
+        </div>
+    </div> <!-- END OF CONTAINER -->
+
+    <audio id="voiceover" src=""></audio>
+
+    <div id="loadingScreen">
+        <div id="loader">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+    </div>
+
+    <script src="../scripts/loader.js"></script>
+    <script src="../scripts/tools.js"></script>
+    <script src="../scripts/view.js"></script>
+    <script src="../scripts/network.js"></script>
+    <script src="../scripts/videoManager.js"></script>
+    <script src="../scripts/audioManager.js"></script>
+    <script src="../scripts/recorder.js"></script>
+    <script src="../scripts/controller.js"></script>
+    <script src="../scripts/reviewFlow.js"></script>
+    <script src="../scripts/activityManagerCallback.js"></script>
+</body>
+
+</html>
