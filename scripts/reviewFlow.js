@@ -6,7 +6,6 @@ let elemPaused;
 const startPlayback = async (outcome) => {
     reviewData = outcome;
     setupEvents();
-    view.toggleBigPlay();
     $(`video`).prop("muted", false);
     if (window.location.href.includes("examiner")) {
         videoManager.setVideoSource(reviewData.leftResponses[0],   "left");
@@ -15,9 +14,29 @@ const startPlayback = async (outcome) => {
 
     $("#leftName p").text(reviewData.leftName);
     $("#rightName p").text(reviewData.rightName);
-    audioManager.playVoiceover(reviewData.voiceovers[0]);
+    $("#loadingScreen").hide();    
+}
 
-    $("#loadingScreen").hide();
+const togglePlay = () => {
+    if (elemPaused === undefined) {
+        if (!voiceover.paused) {
+            elemPaused = voiceover;
+            voiceover.pause();
+        } else if (!leftVideo.paused) {
+            elemPaused = leftVideo;
+            leftVideo.pause();
+        } else if (!rightVideo.paused) {
+            elemPaused = rightVideo;
+            rightVideo.pause();
+        } else {
+            audioManager.playVoiceover(reviewData.voiceovers[currQuestion]);
+        }
+    } else {
+        elemPaused.play();
+        elemPaused = undefined;
+    }        
+    
+    view.toggleBigPlay();
 }
 
 const setupEvents = async () => {
@@ -57,25 +76,5 @@ const setupEvents = async () => {
         videoManager.setVideoSource(reviewData.rightResponses[currQuestion], "right");
     });
 
-    $("#bigPlay").click(function() {
-        if (elemPaused === undefined) {
-            if (!voiceover.paused) {
-                elemPaused = voiceover;
-                voiceover.pause();
-            } else if (!leftVideo.paused) {
-                elemPaused = leftVideo;
-                leftVideo.pause();
-            } else if (!rightVideo.paused) {
-                elemPaused = rightVideo;
-                rightVideo.pause();
-            } else {
-                audioManager.playVoiceover(reviewData.voiceovers[currQuestion]);
-            }
-        } else {
-            elemPaused.play();
-            elemPaused = undefined;
-        }        
-        
-        view.toggleBigPlay();
-    });
+    $("#bigPlay").click(togglePlay);
 }
